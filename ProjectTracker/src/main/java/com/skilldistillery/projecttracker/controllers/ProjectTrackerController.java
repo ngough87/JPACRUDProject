@@ -54,5 +54,12 @@ public class ProjectTrackerController {
 		return "projectDetails";
 	}
 	
+	@RequestMapping(path="update.do", method=RequestMethod.GET)
+	public String updateProject(@RequestParam int id, ProjectTracker project, Model model) {
+		
+		model.addAttribute("project", dao.update(id, project));
+		return "projectUpdate";
+	}
+	
 }
 

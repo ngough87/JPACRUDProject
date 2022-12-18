@@ -123,16 +123,6 @@ public class ProjectTracker {
 		this.pointOfContact = pointOfContact;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-
 	public String getLastUpdated() {
 		return lastUpdated;
 	}
@@ -145,6 +135,16 @@ public class ProjectTracker {
 	}
 
 
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 
 	@Override

@@ -24,6 +24,8 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 	
 		return em.find(ProjectTracker.class, id);
 	}
+	
+	
 
 	@Override
 	public List<ProjectTracker> findAll() {
@@ -61,7 +63,7 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 		updatedProject.setLastUpdated(project.getLastUpdated());
 		
 		
-		return project;
+		return updatedProject;
 	}
 
 	@Override
