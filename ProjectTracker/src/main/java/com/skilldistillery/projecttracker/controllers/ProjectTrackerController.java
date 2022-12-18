@@ -17,7 +17,6 @@ public class ProjectTrackerController {
 	
 	@RequestMapping(path= {"/", "home.do"})
 	public String goToHome(Model model) {
-		//model.addAttribute("projectList", dao.findAll());
 		return "home";
 	}
 
@@ -28,12 +27,7 @@ public class ProjectTrackerController {
 		return "createProject";
 	}
 	
-	
-//	@RequestMapping(path= "allProjects.do", method =RequestMethod.GET)
-//	public String findAllProjects(Model model) {
-//		model.addAttribute("allProjects", dao.findAll());
-//		return "allProjects";
-//	}
+
 	@RequestMapping(path="getProject.do", method=RequestMethod.GET)
 	public String showProjects( Model model) {
 		//ProjectTracker projects=dao.findAll());
@@ -72,6 +66,12 @@ public class ProjectTrackerController {
 		
 		model.addAttribute("project", dao.update(id, project));
 		return "projectUpdate";
+	}
+	@RequestMapping(path="deleteProject.do", method=RequestMethod.GET)
+	public String deleteProject(@RequestParam int id, ProjectTracker project, Model model) {
+		
+		model.addAttribute("project", dao.delete(id));
+		return "deletedProject";
 	}
 	
 	

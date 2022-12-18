@@ -60,7 +60,13 @@
     <input type="text" name="lastUpdated" placeholder="YYYY-MM-DD" aria-label="YYYY-MM-DD"/>
     <br>
 	
-      <input type="submit" value="Submit Project"/>
+      <input type="submit" value="Submit Project Updates"/>
+    
+	</form>
+<form action="deleteProject.do" method="GET" >
+		<input type="text" id="id" name="id" value="${project.id}"/>
+	
+      <input type="submit" value="Delete Project"/>
     
 	</form>
 
