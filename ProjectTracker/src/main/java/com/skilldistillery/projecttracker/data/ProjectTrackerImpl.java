@@ -3,6 +3,8 @@ package com.skilldistillery.projecttracker.data;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -18,8 +20,9 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 	private EntityManager em;
 	
 	@Override
-	public ProjectTracker findById(int projectId) {
-		return em.find(ProjectTracker.class, projectId);
+	public ProjectTracker findById(int id) {
+	
+		return em.find(ProjectTracker.class, id);
 	}
 
 	@Override
@@ -30,19 +33,39 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 
 	@Override
 	public ProjectTracker create(ProjectTracker project) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManagerFactory emf =Persistence.createEntityManagerFactory("JPAProjectTracker");
+		em = emf.createEntityManager();
+		
+		em.getTransaction().begin();
+		
+		em.persist(project);
+		
+		em.flush();
+		
+		em.getTransaction().commit();
+		
+		em.close();
+		emf.close();
+		return project;
 	}
 
 	@Override
-	public ProjectTracker update(int projectId, ProjectTracker project) {
-		// TODO Auto-generated method stub
-		return null;
+	public ProjectTracker update(int id, ProjectTracker project) {
+		ProjectTracker updatedProject=em.find(ProjectTracker.class, id);	
+		
+		updatedProject.setProjectNumber(project.getProjectNumber());
+		updatedProject.setProjectType(project.getProjectType());
+		updatedProject.setClientName(project.getClientName());
+		updatedProject.setStatus(project.getStatus());
+		updatedProject.setPointOfContact(project.getPointOfContact());
+		updatedProject.setLastUpdated(project.getLastUpdated());
+		
+		
+		return project;
 	}
 
 	@Override
-	public Boolean delet(int projectId) {
-		// TODO Auto-generated method stub
+	public Boolean delete(int projectId) {
 		return null;
 	}
 

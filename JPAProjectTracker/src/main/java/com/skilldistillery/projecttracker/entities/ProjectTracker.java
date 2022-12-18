@@ -22,34 +22,45 @@ public class ProjectTracker {
 	
 	@Column(name="project_type")
 	private String projectType;
-	
-	@Column(name="image_url")
-	private String image_url;
+
 	
 	
-	@Column(name="client_name")
+	@Column(name="client")
 	private String clientName;
 	
-	private String notes;
+	private String status;
 
 	@Column(name="point_of_contact")
 	private String pointOfContact;
 	
+	private String notes;
+	
+	@Column(name="last_updated")
+	private String lastUpdated;
 	
 	public ProjectTracker() {}
 
 
-	public ProjectTracker(int id, int projectNumber, String projectType, String image_url, String clientName,
-			String notes, String pointOfContact) {
+	
+
+	public ProjectTracker(int id, int projectNumber, String projectType, String clientName, String status,
+			String pointOfContact, String notes, String lastUpdated) {
 		super();
 		this.id = id;
 		this.projectNumber = projectNumber;
 		this.projectType = projectType;
-		this.image_url = image_url;
 		this.clientName = clientName;
-		this.notes = notes;
+		this.status = status;
 		this.pointOfContact = pointOfContact;
+		this.notes = notes;
+		this.lastUpdated = lastUpdated;
 	}
+
+
+
+
+
+
 
 
 	public int getId() {
@@ -79,16 +90,6 @@ public class ProjectTracker {
 
 	public void setProjectType(String projectType) {
 		this.projectType = projectType;
-	}
-
-
-	public String getImage_url() {
-		return image_url;
-	}
-
-
-	public void setImage_url(String image_url) {
-		this.image_url = image_url;
 	}
 
 
@@ -122,6 +123,30 @@ public class ProjectTracker {
 		this.pointOfContact = pointOfContact;
 	}
 
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+	public String getLastUpdated() {
+		return lastUpdated;
+	}
+
+
+
+
+	public void setLastUpdated(String lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+
+
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -144,8 +169,8 @@ public class ProjectTracker {
 	@Override
 	public String toString() {
 		return "ProjectTracker [id=" + id + ", projectNumber=" + projectNumber + ", projectType=" + projectType
-				+ ", image_url=" + image_url + ", clientName=" + clientName + ", notes=" + notes + ", pointOfContact="
-				+ pointOfContact + "]";
+				+ ", clientName=" + clientName + ", status=" + status + ", pointOfContact=" + pointOfContact
+				+ ", notes=" + notes + ", lastUpdated=" + lastUpdated + "]";
 	}
 	
 	

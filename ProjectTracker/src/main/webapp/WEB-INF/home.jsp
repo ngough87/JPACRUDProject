@@ -7,14 +7,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Project Tracker</title>
+<title>Welcome to ProjecTracker!</title>
+
 </head>
+
+<jsp:include page="projectNavBar.jsp"><jsp:param value="" name=""/></jsp:include>
+	<br>
+
 <body>
 
-<h1>Project tracking made simple</h1>
+<h1> Project tracking made simple</h1>
 
-${projectList}
-
+<h1>TEST does this work?!S</h1>
 
 </body>
 </html>

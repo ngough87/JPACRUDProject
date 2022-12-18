@@ -6,14 +6,14 @@ import com.skilldistillery.projecttracker.entities.ProjectTracker;
 
 public interface ProjectTrackerDAO {
 
-	ProjectTracker findById(int projectId);
+	ProjectTracker findById(int id);
 
 	List<ProjectTracker> findAll();
 
 	ProjectTracker create(ProjectTracker project);
 
-	ProjectTracker update(int projectId, ProjectTracker project);
+	ProjectTracker update(int id, ProjectTracker project);
 
-	Boolean delet(int projectId);
+	Boolean delete(int id);
 
 }

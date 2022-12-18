@@ -44,7 +44,7 @@ class ProjectTrackerTest {
 	@Test
 	void test_ProjectTracker_mappings() {
 	assertNotNull(projectTracker);
-	assertEquals("Bank 123", projectTracker.getClientName() );
+	assertEquals("2022-09-17", projectTracker.getLastUpdated() );
 	
 	}
 
