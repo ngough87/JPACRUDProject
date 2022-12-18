@@ -32,11 +32,11 @@
          My Projects
         </a>
         <div class="dropdown-menu dropdown-dark bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="create.do">Create</a>
+          <a class="dropdown-item" href="create.do">Create New Project</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="update.do">Update</a>
+          <a class="dropdown-item" href="update.do">Edit Projects</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="delet.do">Delete</a>
+          <a class="dropdown-item" href="delet.do">View My Open Projects</a>
         </div>
       </li>
      

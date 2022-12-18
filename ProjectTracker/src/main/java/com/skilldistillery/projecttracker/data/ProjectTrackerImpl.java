@@ -53,22 +53,56 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 
 	@Override
 	public ProjectTracker update(int id, ProjectTracker project) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProjectTracker");
+		em = emf.createEntityManager();
+		
 		ProjectTracker updatedProject=em.find(ProjectTracker.class, id);	
 		
-		updatedProject.setProjectNumber(project.getProjectNumber());
-		updatedProject.setProjectType(project.getProjectType());
-		updatedProject.setClientName(project.getClientName());
-		updatedProject.setStatus(project.getStatus());
-		updatedProject.setPointOfContact(project.getPointOfContact());
-		updatedProject.setLastUpdated(project.getLastUpdated());
+		if(updatedProject != null) {
+			em.getTransaction().begin();
 		
+			updatedProject.setProjectNumber(project.getProjectNumber());
+			updatedProject.setProjectType(project.getProjectType());
+			updatedProject.setClientName(project.getClientName());
+			updatedProject.setStatus(project.getStatus());
+			updatedProject.setPointOfContact(project.getPointOfContact());
+			updatedProject.setNotes(project.getNotes());
+			updatedProject.setLastUpdated(project.getLastUpdated());
+			
+			em.getTransaction().commit();
+			
 		
-		return updatedProject;
 	}
+		
+		em.close();
+		emf.close();
 
+		return updatedProject;
+		
+	}
 	@Override
-	public Boolean delete(int projectId) {
-		return null;
+	public boolean delete(int id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProjectTracker");
+		em = emf.createEntityManager();
+		
+		   boolean successfullyDeleted = false;
+		    ProjectTracker deleteProject = em.find(ProjectTracker.class, id);
+			  if(deleteProject != null) {
+				  // open a transaction
+				  em.getTransaction().begin();
+				  em.remove(deleteProject);
+				  
+				  successfullyDeleted =  !em.contains(deleteProject);
+				
+				  em.getTransaction().commit();
+
+				 
+			  }
+	
+		    
+			  em.close();
+				emf.close();
+		return successfullyDeleted;
 	}
 
 }

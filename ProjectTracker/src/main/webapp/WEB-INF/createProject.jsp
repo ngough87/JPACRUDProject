@@ -22,7 +22,7 @@
 	 <input type="text" name="projectNumber" placeholder="Six-digit number" aria-label="Six-digit number"/>
 	 <br>
 	  <label for="project">Project Type:</label>
-  <select  name="project">
+  <select  name="projectType">
     <option value="step">Step-Up Authentication</option>
     <option value="fullproject">Full project</option>
     <option value="dotp visa">dOTP Visa</option>
@@ -35,7 +35,7 @@
 	 <input type="text" name="clientName"/>
 	 <br>
 	  <label for="project">Project Status:</label>
-  	<select  name="project">
+  	<select  name="projectStatus">
     <option value="new">NEW</option>
     <option value="Inprog">In-progress</option>
     <option value="onHold">On Hold</option>

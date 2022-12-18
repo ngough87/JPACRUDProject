@@ -14,7 +14,7 @@ public interface ProjectTrackerDAO {
 
 	ProjectTracker update(int id, ProjectTracker project);
 
-	Boolean delete(int id);
+	public boolean delete(int id);
 
 	
 

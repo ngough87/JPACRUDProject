@@ -53,13 +53,29 @@ public class ProjectTrackerController {
 		model.addAttribute("project", dao.findById(id));
 		return "projectDetails";
 	}
+	@RequestMapping(path="findByIdForUpdate.do", method=RequestMethod.GET)
+	public String findProjectByIdForUpdate(@RequestParam int id, Model model) {
+		
+		model.addAttribute("project", dao.findById(id));
+		return "projectUpdate";
+	}
+	
+	
 	
 	@RequestMapping(path="update.do", method=RequestMethod.GET)
-	public String updateProject(@RequestParam int id, ProjectTracker project, Model model) {
+	public String updateProject( Model model) {
+		return "projectUpdate";
+	}
+	
+	@RequestMapping(path="updateForm.do", method=RequestMethod.GET)
+	public String updateForm(@RequestParam int id, ProjectTracker project, Model model) {
 		
 		model.addAttribute("project", dao.update(id, project));
 		return "projectUpdate";
 	}
+	
+	
+	
 	
 }
 
