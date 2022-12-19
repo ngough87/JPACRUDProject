@@ -73,7 +73,11 @@ public class ProjectTrackerController {
 		model.addAttribute("project", dao.delete(id));
 		return "deletedProject";
 	}
-	
+	@RequestMapping(path="email.do", method=RequestMethod.GET)
+	public String savedProject(Model model) {
+		return "email";
+	}
+
 	
 	
 	

@@ -8,11 +8,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>All projects</title>
- <link rel="stylesheet" type="text/css" href="myStyles.css">
+ 
 </head>
 
 <jsp:include page="projectNavBar.jsp"><jsp:param value="" name=""/></jsp:include>
-	<br>
+<body>
+
 <body>
 
 <div class="container-fluid"> 
@@ -51,4 +52,6 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
+
+<jsp:include page="footer.jsp"/>
 </html>

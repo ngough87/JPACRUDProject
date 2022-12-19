@@ -15,10 +15,17 @@
 	<br>
 
 <body>
+<jsp:include page="header.jsp"><jsp:param value="" name=""/></jsp:include>
 
-<h1> Project tracking made simple</h1>
-
-<h1>TEST does this work?!S</h1>
+<jsp:include page="backround.jsp"><jsp:param value="" name=""/></jsp:include>
 
 </body>
+
+
+
+
+
+<jsp:include page="footer.jsp"/>
+
+
 </html>

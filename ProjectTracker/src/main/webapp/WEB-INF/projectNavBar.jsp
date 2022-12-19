@@ -35,16 +35,18 @@
           <a class="dropdown-item" href="create.do">Create New Project</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="update.do">Edit Projects</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="delet.do">View My Open Projects</a>
-        </div>
+          
       </li>
      
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" href="findById.com" type="submit">Search by Id</button>
+    <form action="findById.do" method="GET" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" name="id" placeholder="Search" aria-label="Search" >
+ 
+     
+   		<input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search By Id"/>
+    
     </form>
+  
   </div>
 </nav>
 

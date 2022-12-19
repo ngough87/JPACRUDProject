@@ -33,7 +33,8 @@
 		
 		<br>
 		<a href="home.do" class="btn btn-primary" role="button">Return to main menu </a>
-		
+		<br>
 	
 </body>
+<jsp:include page="footer.jsp"/>
 </html>
