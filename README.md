@@ -7,6 +7,8 @@ This project was centered on Create, Read, Update, and Delete (CRUD) procedures.
 
 Via the Project Tracker website, a user is able to monitor the status projects at varying stages including new, in-progress, oh hold, and blocked. A user is able to add and delete projects, as well as make edits to information. Additionally, the user is able to view project details for each project. The user can navigate various pages via the navigation bar or quickly look up projects with a quick access search on the navigation bar.
 
+The Application can be found here:
+http://18.189.201.125:8080/ProjectTracker/
 
 ## Technologies Used
 - Java
