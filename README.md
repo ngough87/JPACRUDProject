@@ -3,9 +3,9 @@ Skill Distillery Week 9
 
 ## Description
 
-This project was centered on Create, Read, Update, and Delete (CRUD). The primary goal was to achieve performing simple CRUD on a single database that I created.
+This project was centered on Create, Read, Update, and Delete (CRUD) procedures. The primary goal was to achieve the performance of simple CRUD on a single database that I created. The database contained sanitized versions of projects worked on in a previous role as a project manager.
 
-Via the Project Tracker website, a user is able to monitor the status projects at varying stages including new, in-progress, oh hold, and blocked. A user is able to add and delete projects. Additionally, the user is able to view project details for each project. The user can navigate various pages via the navigation bar or quickly look up projects with a quick access search on the navigation bar.
+Via the Project Tracker website, a user is able to monitor the status projects at varying stages including new, in-progress, oh hold, and blocked. A user is able to add and delete projects, as well as make edits to information. Additionally, the user is able to view project details for each project. The user can navigate various pages via the navigation bar or quickly look up projects with a quick access search on the navigation bar.
 
 
 ## Technologies Used
@@ -27,4 +27,4 @@ Via the Project Tracker website, a user is able to monitor the status projects a
 
 - I had a lot of fun in creating the front end. I do think that I was still left thinking, "Just one more thing to add". I think that is definately a rabbit hole I would like to explore in future projects, time permitting.
 
-- Finally, I do admit, the entire process felt very overwhelming in the beginning. I found that if I wrote out what I was trying to achieve on the front end, I could start on the backend and work my way there. Albeit with a lot of trial and error. 
+- Finally, I do admit, the entire process felt very overwhelming in the beginning. I found that if I wrote out what I was trying to achieve on the front end, I could start on the backend and work my way there. Albeit with a lot of trial and error.
