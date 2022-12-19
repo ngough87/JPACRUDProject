@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Update Player</title>
+<title>Update Project</title>
 <style type="text/css" media="all">
   .form_table { text-align: center; }
   .full_width .segment_header { text-align: center !important; }

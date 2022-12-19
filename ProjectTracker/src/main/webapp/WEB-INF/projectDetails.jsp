@@ -13,6 +13,7 @@
 <jsp:include page="projectNavBar.jsp"><jsp:param value="" name=""/></jsp:include>
 	<br>
 <body>
+<div id="form-wrapper" style="max-width:500px;margin:auto;">
 <h2>Project Details</h2>
 	
 	
@@ -34,7 +35,11 @@
 		<br>
 		<a href="home.do" class="btn btn-primary" role="button">Return to main menu </a>
 		<br>
-	
+		<br>
+		<a href="update.do" class="btn btn-primary" role="button">Edit Project </a>
+		<br>
+	</div>
 </body>
+<br>
 <jsp:include page="footer.jsp"/>
 </html>
