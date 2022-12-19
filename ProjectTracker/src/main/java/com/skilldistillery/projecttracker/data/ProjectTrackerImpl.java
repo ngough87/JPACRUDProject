@@ -35,31 +35,27 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 
 	@Override
 	public ProjectTracker create(ProjectTracker project) {
-		EntityManagerFactory emf =Persistence.createEntityManagerFactory("JPAProjectTracker");
-		em = emf.createEntityManager();
 		
-		em.getTransaction().begin();
+		
+		
 		
 		em.persist(project);
 		
 		em.flush();
 		
-		em.getTransaction().commit();
 		
-		em.close();
-		emf.close();
+	
 		return project;
 	}
 
 	@Override
 	public ProjectTracker update(int id, ProjectTracker project) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProjectTracker");
-		em = emf.createEntityManager();
+		
 		
 		ProjectTracker updatedProject=em.find(ProjectTracker.class, id);	
 		
 		if(updatedProject != null) {
-			em.getTransaction().begin();
+			
 		
 			updatedProject.setProjectNumber(project.getProjectNumber());
 			updatedProject.setProjectType(project.getProjectType());
@@ -69,39 +65,35 @@ public class ProjectTrackerImpl implements ProjectTrackerDAO {
 			updatedProject.setNotes(project.getNotes());
 			updatedProject.setLastUpdated(project.getLastUpdated());
 			
-			em.getTransaction().commit();
+			
 			
 		
 	}
 		
-		em.close();
-		emf.close();
+		
 
 		return updatedProject;
 		
 	}
 	@Override
 	public boolean delete(int id) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAProjectTracker");
-		em = emf.createEntityManager();
 		
 		   boolean successfullyDeleted = false;
 		    ProjectTracker deleteProject = em.find(ProjectTracker.class, id);
 			  if(deleteProject != null) {
 				  // open a transaction
-				  em.getTransaction().begin();
+				  
 				  em.remove(deleteProject);
 				  
 				  successfullyDeleted =  !em.contains(deleteProject);
 				
-				  em.getTransaction().commit();
+				 
 
 				 
 			  }
 	
 		    
-			  em.close();
-				emf.close();
+			  
 		return successfullyDeleted;
 	}
 
