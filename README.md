@@ -19,7 +19,7 @@ Via the Project Tracker website, a user is able to monitor the status projects a
 - JUnit
 - JPA
 - Gradle
--S pringBoot
+- Spring Framework
 
 ## Lessons Learned
 
